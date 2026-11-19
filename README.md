@@ -2,7 +2,7 @@
 
 A private, interactive personal-finance desk that runs entirely in your browser.
 
-**Live site:** https://rishithanandyalaoff-maker.github.io/rishithas-wealth-world/
+**Live site:** https://rishithanandyalaoff-maker.github.io/wealth-wizard/
 
 ## Open the site
 
