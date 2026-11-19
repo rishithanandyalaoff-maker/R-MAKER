@@ -1,19 +1,15 @@
 # Wealth Wizard
 
-A private, interactive personal-finance desk that runs entirely in your browser.
+A starter personal-finance guide for students and internationals learning US money basics.
 
 **Live site:** https://rishithanandyalaoff-maker.github.io/R-MAKER/
 
-## Open the site
+## What it does
 
-- Online: open the live link above  
-- On your computer: double-click `index.html`
+1. **Setup quiz** — stage, visa/stay plans, debt, emergency fund, employer money, optional goal
+2. **Recommended structure** — protect first, then grow (tuned for short vs long US horizon)
+3. **Big moves** — log job offers, visas, accounts opened, refinance, etc. The plan updates over time
 
-## What you can do
+No daily expense tracking. Answers stay in the browser.
 
-- Track net worth across cash, savings, investments, and credit
-- Log income, spending, and transfers
-- Set monthly budgets and savings goals
-- Keep sample data, edit it, or erase everything
-
-All numbers stay in this browser's local storage. Nothing is uploaded.
+Not tax, legal, or investment advice.
