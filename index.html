@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rishitha's Wealth World</title>
+  <meta name="description" content="A private ledger for tracking cash, investments, budgets, and savings goals." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23c8922a'/%3E%3Ccircle cx='32' cy='32' r='20' fill='none' stroke='%23fff6df' stroke-width='3'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,650&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=6" />
+</head>
+<body>
+  <div class="shell">
+    <aside>
+      <div class="brand">
+        <span class="mark" aria-hidden="true"></span>
+        <div>
+          <p class="eyebrow">Private finance desk</p>
+          <h1>Rishitha's Wealth World</h1>
+        </div>
+      </div>
+      <nav aria-label="Sections">
+        <button type="button" data-view="overview" class="active">Overview</button>
+        <button type="button" data-view="activity">Activity</button>
+        <button type="button" data-view="accounts">Accounts</button>
+        <button type="button" data-view="budgets">Budgets</button>
+        <button type="button" data-view="goals">Goals</button>
+      </nav>
+      <p class="privacy">Your numbers stay in this browser. Nothing is uploaded.</p>
+    </aside>
+
+    <div class="workspace">
+      <header class="topbar">
+        <div>
+          <p id="today-label" class="eyebrow"></p>
+          <p class="net-mini">Net worth <strong id="header-stat" aria-live="polite"></strong></p>
+        </div>
+        <button type="button" class="primary" id="add-move">Add a money move</button>
+      </header>
+      <div id="banner"></div>
+      <main id="view"></main>
+    </div>
+  </div>
+
+  <dialog id="composer" class="composer">
+    <form id="composer-form">
+      <header class="composer-head">
+        <h2 id="composer-title">Add</h2>
+        <button type="button" class="ghost icon-btn" id="composer-close" aria-label="Close">×</button>
+      </header>
+      <div id="composer-fields" class="composer-fields"></div>
+      <p id="composer-error" class="form-error" hidden></p>
+      <footer class="composer-actions">
+        <button type="button" class="ghost" id="composer-cancel">Cancel</button>
+        <button type="submit" class="primary" id="composer-save">Save</button>
+      </footer>
+    </form>
+  </dialog>
+
+  <script src="app.js?v=5"></script>
+</body>
+</html>
