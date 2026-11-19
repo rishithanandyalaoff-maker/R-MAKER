@@ -1,4 +1,5 @@
-const STORAGE_KEY = "rishitha-wealth-world-v1";
+const STORAGE_KEY = "wealth-wizard-v1";
+const LEGACY_STORAGE_KEY = "rishitha-wealth-world-v1";
 let idSequence = 0;
 
 const INCOME_CATEGORIES = ["Paycheck", "Freelance", "Gift", "Market change", "Other income"];
@@ -40,7 +41,14 @@ render();
 
 function load() {
   try {
-    const raw = localStorage.getItem(STORAGE_KEY);
+    let raw = localStorage.getItem(STORAGE_KEY);
+    if (!raw) {
+      raw = localStorage.getItem(LEGACY_STORAGE_KEY);
+      if (raw) {
+        localStorage.setItem(STORAGE_KEY, raw);
+        localStorage.removeItem(LEGACY_STORAGE_KEY);
+      }
+    }
     if (!raw) return seed();
     const parsed = JSON.parse(raw);
     if (!parsed || !Array.isArray(parsed.accounts)) return seed();

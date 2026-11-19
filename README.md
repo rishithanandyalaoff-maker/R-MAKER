@@ -1,4 +1,4 @@
-# Rishitha's Wealth World
+# Wealth Wizard
 
 A private, interactive personal-finance desk that runs entirely in your browser.
 
