@@ -2,13 +2,12 @@
 
 A private, interactive personal-finance desk that runs entirely in your browser.
 
+**Live site:** https://rishithanandyalaoff-maker.github.io/rishithas-wealth-world/
+
 ## Open the site
 
-Double-click `index.html`, or from this folder run:
-
-```powershell
-start index.html
-```
+- Online: open the live link above  
+- On your computer: double-click `index.html`
 
 ## What you can do
 
