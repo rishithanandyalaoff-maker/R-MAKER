@@ -26,7 +26,10 @@ http://localhost:3000/R-MAKER/
 
 ## Scripts
 
-- `npm run dev` — local site
+- `npm run dev` — local site (open `/R-MAKER/`)
 - `npm run build` — static export to `out/`
 - `npm test` — Vitest
-- Push to `main` — GitHub Actions builds and deploys Pages
+
+**Live site (not this README page):** https://rishithanandyalaoff-maker.github.io/R-MAKER/
+
+Deploy: build with `npm run build`, then publish the `out/` folder to the `gh-pages` branch.
