@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+/* Harbor ledger — cool mist paper, navy ink, teal money accent (not cream/purple) */
+:root {
+  --bg: #eef3f7;
+  --surface: #e2eaf1;
+  --card: #f8fbfd;
+  --ink: #132338;
+  --muted: #5a6b7d;
+  --line: #c5d3e0;
+  --accent: #0d8f7b;
+  --accent-soft: #d4f0eb;
+  --lilac: #1f6f8f;
+  --lilac-soft: #d7ebf3;
+  --blue: #2a6bb5;
+  --blue-soft: #ddebf8;
+  --amber: #c45c2a;
+  --amber-soft: #fde8dc;
+  --green: #0d8f7b;
+  --green-soft: #d4f0eb;
+  --shadow: 0 12px 28px rgba(19, 35, 56, 0.07);
+  --reading: 42rem;
+  --hero-wash: #9ec9d8;
+}
+
+.dark {
+  --bg: #0c1520;
+  --surface: #142232;
+  --card: #182839;
+  --ink: #e8f0f7;
+  --muted: #93a6ba;
+  --line: #2a4056;
+  --accent: #3ecfba;
+  --accent-soft: #143832;
+  --lilac: #6eb8d4;
+  --lilac-soft: #163246;
+  --blue: #7eb4e8;
+  --blue-soft: #152a40;
+  --amber: #f0a070;
+  --amber-soft: #3a2418;
+  --green: #3ecfba;
+  --green-soft: #143832;
+  --shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
+  --hero-wash: #1a4a5c;
+}
+
+@theme inline {
+  --color-background: var(--bg);
+  --color-foreground: var(--ink);
+  --font-sans: var(--font-body);
+  --font-display: var(--font-display);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(1100px 520px at -8% -15%, color-mix(in oklab, var(--hero-wash) 55%, transparent), transparent 58%),
+    radial-gradient(800px 480px at 108% 0%, color-mix(in oklab, var(--accent) 18%, transparent), transparent 52%),
+    linear-gradient(180deg, color-mix(in oklab, var(--surface) 55%, transparent) 0%, transparent 42%),
+    repeating-linear-gradient(
+      -12deg,
+      transparent,
+      transparent 11px,
+      color-mix(in oklab, var(--line) 28%, transparent) 11px,
+      color-mix(in oklab, var(--line) 28%, transparent) 12px
+    );
+  background-attachment: fixed;
+  color: var(--ink);
+  font-family: var(--font-body), "Segoe UI", sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid color-mix(in oklab, var(--accent) 70%, white);
+  outline-offset: 2px;
+}
+
+.prose-narrow {
+  max-width: var(--reading);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+    font-size: 12pt;
+  }
+
+  header,
+  footer,
+  .print\:hidden {
+    display: none !important;
+  }
+
+  a {
+    text-decoration: none !important;
+  }
+}

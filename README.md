@@ -1,15 +1,32 @@
-# Wealth Wizard
+# Money Basics
 
-A starter personal-finance guide for students and internationals learning US money basics.
+Free beginner lessons and calculators for new grads and international students learning US personal finance.
 
-**Live site:** https://rishithanandyalaoff-maker.github.io/R-MAKER/
+**Live:** https://rishithanandyalaoff-maker.github.io/R-MAKER/
 
-## What it does
+Educational only — not financial, tax, legal, or immigration advice.
 
-1. **Setup quiz** — stage, visa/stay plans, debt, emergency fund, employer money, optional goal
-2. **Recommended structure** — protect first, then grow (tuned for short vs long US horizon)
-3. **Big moves** — log job offers, visas, accounts opened, refinance, etc. The plan updates over time
+## Stack
 
-No daily expense tracking. Answers stay in the browser.
+- Next.js App Router + TypeScript + Tailwind
+- Static export (`output: 'export'`) for GitHub Pages
+- Client-side calculators; localStorage only
+- Tax-year constants in `src/lib/rules/2026.ts`
 
-Not tax, legal, or investment advice.
+## Develop
+
+```bash
+npm install
+npm run dev
+```
+
+Because this repo deploys as a GitHub project site, open:
+
+http://localhost:3000/R-MAKER/
+
+## Scripts
+
+- `npm run dev` — local site
+- `npm run build` — static export to `out/`
+- `npm test` — Vitest
+- Push to `main` — GitHub Actions builds and deploys Pages
